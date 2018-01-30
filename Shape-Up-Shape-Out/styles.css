@@ -1,0 +1,60 @@
+body {
+    color:black;
+
+}
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background: green;
+}
+.square {
+    width: 100px;
+	height: 100px;
+	background: red;
+  }
+.circle {
+    width: 100px;
+	height: 100px;
+	background: purple;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+.triangle {
+    width: 0;
+	height: 0;
+	border-bottom: 100px solid yellow;
+	border-left: 100px solid transparent;
+}
+.shapebox {
+    width: 600px;
+    height: 600px;
+    background-color: blue;
+    position: absolute;
+    left: -602px;
+    bottom: -100px;
+
+}
+.panel {
+    width: 340px;
+    height: 500px;
+    background-color: red;
+    position: absolute;
+    left: 1201px;
+    bottom: 296px;
+    text-align: center;
+
+}
+.input-container {
+    width: 400px;
+    height: 600px;
+    border: black;
+    border-width: 1em;
+    background-color: green;
+    position: absolute;
+    left: 196px;
+    bottom: 196px;
+    text-align: center;
+
+    
+}

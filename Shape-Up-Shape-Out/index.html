@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shape Up or Shape Out Lab</title>
+
+</head>
+<body>
+    <div class="input-container" id="inputcontainer">
+    <h1>Rectangle</h1>
+        <input type="text" value="width"><br>
+        <input type="text" value="height"><br>
+            <button id="rectangleButton" onClick="myFunction()">INSERT Rectangle</button>
+    <h1>Square</h1>
+        <input type="text" value="side length"><br>
+            <button id="squareButton" onClick="">INSERT Square</button>
+    <h1>Circle</h1>
+        <input type="text" value="radius"><br>
+            <button id="circleButton" onClick="">INSERT Circle</button>
+    <h1>Isoceles Right Triangle</h1>
+        <input type="text" value="height"><br>
+            <button id="triangleButton" onClick="">INSERT Isoceles Right Triangle</button>
+    </div>
+    
+
+    <div class="panel" id="shapeStats">
+            <h1><strong>Shape Stats</strong></h1>
+        <!--
+        <div class="rectangleContainer"id="rectangle-container">
+            <p><strong>Shape Name:</strong></p>
+            <p>Width:</p>
+            <p>Height:</p>
+            <p>Radius:</p>
+            <p>Area:</p>
+            <p>Perimeter:</p>
+        </div>
+        <div class="squareContainer" id="square-container">
+                <p><strong>Shape Name:</strong></p>
+                <p>Width:</p>
+                <p>Height:</p>
+                <p>Radius:</p>
+                <p>Area:</p>
+                <p>Perimeter:</p>
+        </div>
+        <div class="circleContainer" id="circle-container">
+                <p><strong>Shape Name:</strong></p>
+                <p>Width:</p>
+                <p>Height:</p>
+                <p>Radius:</p>
+                <p>Area:</p>
+                <p>Perimeter:</p>
+        </div>
+        <div class="triangleContainer" id="triangle-container">
+                <p><strong>Shape Name:</strong></p>
+                <p>Width:</p>
+                <p>Height:</p>
+                <p>Radius:</p>
+                <p>Area:</p>
+                <p>Perimeter:</p>
+        </div>-->
+        <div id="shapeBox" class="shapebox"></div>
+        <!--div class="panel"><h1><strong>Shape Stats</strong></h1></div-->
+        <div id="rectangleShape" class="rectangle"></div><br>
+        <div id="squareShape" class="square"></div><br>
+        <div id="circleShape" class="circle"></div>
+        <div id="triangleShape" class="triangle"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
