@@ -15,25 +15,31 @@
 <body>
     <div class="input-container" id="inputcontainer">
     <h1>Rectangle</h1>
-        <input type="text" value="width"><br>
-        <input type="text" value="height"><br>
-            <button id="rectangleButton" onClick="myFunction()">INSERT Rectangle</button>
+        <input type="text" value="width" id="rectangleWidthInput"><br>
+        <input type="text" value="height" id="rectangleHeightInput"><br>
+            <button id="rectangleButton" onClick="makeRectangle()">INSERT Rectangle</button>
     <h1>Square</h1>
-        <input type="text" value="side length"><br>
-            <button id="squareButton" onClick="">INSERT Square</button>
+        <input type="text" value="side length" id="squareInput"><br>
+            <button id="squareButton" onClick="makeSquare()">INSERT Square</button>
     <h1>Circle</h1>
-        <input type="text" value="radius"><br>
-            <button id="circleButton" onClick="">INSERT Circle</button>
+        <input type="text" value="radius" id="circleInput"><br>
+            <button id="circleButton" onClick="makeCircle()">INSERT Circle</button>
     <h1>Isoceles Right Triangle</h1>
-        <input type="text" value="height"><br>
-            <button id="triangleButton" onClick="">INSERT Isoceles Right Triangle</button>
+        <input type="text" value="height" id="triangleInput"><br>
+            <button id="triangleButton" onClick="makeTriangle()">INSERT Isoceles Right Triangle</button>
     </div>
     
 
     <div class="panel" id="shapeStats">
             <h1><strong>Shape Stats</strong></h1>
-        <!--
-        <div class="rectangleContainer"id="rectangle-container">
+     
+        <div class="shapeStats"id="shape-stats">
+            <p id="shapeName"></p>
+            <p id="shapeWidth"></p>
+            <p id="shapeHeight"></p>
+            <p id="shapeRadius"></p>
+            <p id="shapeArea"></p>
+            <p id="shapePerimeter"></p>
             <p><strong>Shape Name:</strong></p>
             <p>Width:</p>
             <p>Height:</p>
@@ -41,24 +47,25 @@
             <p>Area:</p>
             <p>Perimeter:</p>
         </div>
-        <div class="squareContainer" id="square-container">
-                <p><strong>Shape Name:</strong></p>
+        <!--
+        <div class="squareStats" id="square-stats">
+                <p><strong>Shape Name: Square</strong></p>
                 <p>Width:</p>
                 <p>Height:</p>
                 <p>Radius:</p>
                 <p>Area:</p>
                 <p>Perimeter:</p>
         </div>
-        <div class="circleContainer" id="circle-container">
-                <p><strong>Shape Name:</strong></p>
+        <div class="circleStats" id="circle-stats">
+                <p><strong>Shape Name: Circle</strong></p>
                 <p>Width:</p>
                 <p>Height:</p>
                 <p>Radius:</p>
                 <p>Area:</p>
                 <p>Perimeter:</p>
         </div>
-        <div class="triangleContainer" id="triangle-container">
-                <p><strong>Shape Name:</strong></p>
+        <div class="triangleStats" id="triangle-stats">
+                <p><strong>Shape Name: Isoceles Right Triangle</strong></p>
                 <p>Width:</p>
                 <p>Height:</p>
                 <p>Radius:</p>
