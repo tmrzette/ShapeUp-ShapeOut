@@ -1,3 +1,5 @@
+// Each var should be a let without everything to the right of the equal sign
+///Should go inside the "DOMContentLoaded" function
 var rectangle = document.getElementById("rectangleShape");
 var square = document.getElementById("squareShape");
 var circle = document.getElementById("circleShape");
@@ -31,19 +33,19 @@ let targetPerimeter;
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
+    //let containers must be loaded 
      console.log("DOM Content loaded");
     })
 
 
 class Shape {
-    constructor(shape, width, height, radius, area, perimeter) {
-        this.shape = shape;
-        this.width = width;
-        this.height = height;
-        this.radius = radius;
-        this.area = area;
-        this.perimeter = perimeter;
+    constructor(type) {
+        this.type = type;
+        this.shape = document.createElement("div");
+        this.shape.className = this.type;
         //this.describe = describe();
+        //binds the describe function with the on click function
+        this.shape.addEventListener('click', this.describe.bind(this));
     }
     //Puts description of shape stats in shape panel
     decribe() {
@@ -54,12 +56,18 @@ class Shape {
               shapePanel.innerText = `Area: ${targetRadius}`;
               shapePanel.innerText = `Perimeter: ${targetPerimeter}`;
               shapePanel.style.color = "black";
+              //Makes the container visible
               shapePanel.innerText.style.visibility = "visible";
     }
-
+    render() {
+        shapeBox.appendChild(this.shape)
+    }
+     //Switch statement is to be used to find area and perimeter a case for each this.type 
+     //should use getArea () and getPerimeter() functions respectively, inside the parent class 
+     //switch(this.type) () 
 }
 class Rectangle extends Shape {
-    constructor() {
+    constructor(width, height) {
         super("Rectangle");
         this.render();
             
@@ -91,7 +99,7 @@ const makeSquare = function() {
     new Square(squareInput.value);
 
 class Square extends Shape {
-    constructor() {
+    constructor(side) {
         super("Square");
         this.render();
 
@@ -123,7 +131,7 @@ const makeSquare = function() {
     new Square(squareInput.value);
 }
 class Circle extends Shape {
-    constructor() {
+    constructor(radius) {
         super("Circle");
         this.radius = radius;
         this.render();
@@ -155,9 +163,11 @@ const makeSquare = function() {
     new Circle(circleInput.value);
 
 class Triangle extends Shape {
-    constructor() {
+    constructor(height) {
         super("Triangle");
+        // render function should be loaded last
         this.render();
+
 
     } 
     //Makes Triangle Object
@@ -186,7 +196,8 @@ class Triangle extends Shape {
         
 }
 const makeTriangle = function() {
-    new Triangle(triangleInput.value);
+    //the plus sign turn the value into a number instead of a string
+    new Triangle(+triangleInput.value);
 
 const rectangle = new rectangle("Rectangle", "200px", "100px", null, null, "600px");
 const square = new square("Square", "100px", "100px", null, null, "400px");
@@ -219,6 +230,9 @@ const cloneShape = () => {
 
 //function myFunction() {
   //  if (document.getElementById("rectangleShape").style.visibility = "hidden"
+
+//input from the contructor in each etended class
+  this.type.style.width = `${}`
 
 
 
